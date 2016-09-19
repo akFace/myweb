@@ -1,0 +1,81 @@
+@charset "utf-8";
+/*---------万能清除浮动---------------*/
+.clearfix:after {
+ content: '';
+ display: block;
+ height: 0;
+ clear: both;
+}
+.clearfix {
+ zoom: 1;
+}
+/*------------------top头部----------------------*/
+.topbg { width: 100%;height: 30px;background: #ff5073; }
+.top { width: 1172px;height: 30px;margin: 0 auto ;color: #fff;}
+.top a { color: #fff; }
+.top a:hover { text-decoration: underline; }
+.top li:hover{ cursor:pointer ; }
+.top .left li { float: left; line-height: 30px;padding-right: 10px;}
+.top .right { float: right; }
+.top .right li { float: left; line-height: 30px;padding-left: 17px;}
+.ico-1,.ico-2,.ico-3,.ico-4 {float: left; display: block;width: 16px;height: 20px; background: url(ico-img/newhome_icon.png) no-repeat; padding-left:5px;line-height: 30px;}
+.ico-1 { background-position: 0 8px; }
+.ico-2 { background-position: 0 -11px; height: 25px;}
+.ico-3 { background-position: 0 -37px; width: 16px; height: 17px;margin-top: 7px;}
+.ico-4 { background-position: 0 -57px; width: 18px; height: 18px;margin-top: 7px;}
+
+/*--------logo和搜索框-------------*/
+.serch { width: 1172px;height: 92px; margin: 0 auto; }
+.logo { float: left; margin-top: 30px;}
+.serchs { float: left; width: 420px; height: 36px;line-height: 30px;border: 1px solid #ff5073; border-radius: 20px;margin-left: 100px;margin-top: 30px;}
+.serchs input {text-indent: 10px; width: 360px; height: 36px; border: none; margin-left: 12px;border-radius: 20px;}
+.serch-ico {display: block; float: right; width: 22px;height: 22px;background: url(ico-img/newhome_icon.png) no-repeat; background-position: 0 -88px;position: relative;top: 7px;right: 12px;border: none;cursor: pointer;}
+.appdown { float: right; height: 92px; overflow: hidden;}
+.appdown img { width: 84px;height: 84px; position: relative;top: -64px;right: -100px;z-index: 100;border: 1px solid #ff5073; }
+.appdownbg {display: block; width: 280px;height: 70px; background:url(ico-img/newhome_icon.png) no-repeat 0 -192px;z-index: 100;}
+
+/*----------导航栏----------------*/
+.navbg { width: 100%; height: 45px; border-bottom: 1px solid #eee;border-top: 1px solid #eee; margin-top:2px;}
+.nav { width: 1172px; height: 45px;margin:0 auto; }
+.navlist {position: relative; float: left; line-height: 45px;text-align: center;padding-left: 35px;font-size: 16px;}
+.nav-a { padding-top: 7px; }
+.navlist a { color: #333; display: inline-block;}
+.navlist a:hover { color: #ff5073;}
+.sort { background: #f2f2f2;display: block; width: 160px;height: 38px; position: relative;}
+.icon-menu { display: block;width: 20px ;height: 14px ; background: url(ico-img/classify.png); position: absolute;top: 24px;left: 23px;}
+.ico-hot,.new-protc,.ico-new {display: block;width: 30px;height: 15px; background:url(ico-img/newhome_icon.png) no-repeat; position: absolute;top: 4px; margin-left: 8px; }
+.ico-hot { background-position: 0 -322px;}
+.new-protc { background-position: 0 -430px; }
+.ico-new { background-position: 0 -430px; right: -10px; }
+.navhide {position: absolute;top: 46px; z-index: 100;background: #fff; width: 200px;padding-bottom: 10px;display: none;text-align: left;margin-left: -15px;}
+.navhide a { padding-left: 15px; }
+
+
+
+/*----------底部-------------*/
+.footer-container { padding-top: 50px; }
+.footer-topbg { width: 100%; height: 189px;background: #f3f1f2; border-top:1px solid #eaeaea;border-bottom:1px solid #eaeaea;}
+.footer-top { width: 1172px;margin: 0 auto; text-align: center;}
+.foot { float: left; width: 25%; margin-top: 50px;}
+.foot h3 { line-height: 60px;font-size: 20px;font-weight: bold; }
+
+.footer-center { width: 1172px; margin: 0 auto; margin-bottom: 30px;}
+.servers { float: left; width:16.5%; margin-top: 40px; border-left: 1px solid #eaeaea; }
+.servers h2 { padding-top: 10px; padding-left: 35px; margin-bottom: 10px;font-weight: bolder;font-size: 18px; }
+.servers ul li { line-height: 33px; padding-left: 35px;}
+.servers ul li a { color: #333; }
+.servers ul li a:hover { color:rgb(255, 68, 144) }
+.footer-1 { float: left; width: 33%; text-align: center; margin-top: 40px;}
+.footer-1 h3 { margin: 20px 0 10px 0 ; font-size: 14px; font-weight: bolder;}
+.erweima { padding: 0 5px; }
+
+.footer-bottom { width: 100%;height: 79px;border-top: 1px solid #eaeaea;border-bottom: 1px solid #eaeaea;text-align: center; }
+.footer-bottom h3 { margin-top: 15px; }
+.footer-bottom span { line-height: 50px; padding: 0 10px;}
+.copyright { width: 1172px;margin: 0 auto; }
+.copyright .p1 { float: left;line-height: 79px; }
+.copyright .p2 { float: right; line-height: 79px;}
+.copyright .p2 img { margin-top: 10px; }
+.copyright .p2 span { float: left; padding-left: 10px;}
+
+

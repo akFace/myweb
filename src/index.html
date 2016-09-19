@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<title>美美箱首页</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="css/common.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<script src="assets/jquery/jquery-1.12.0.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/index.js"></script>
+</head>
+<body>
+	<div class="topbg">
+		<div class="top">
+			<ul class="left">
+				<li><span class="ico-1"></span>100%韩国正品美美箱</li>
+				<li><span class="ico-2"></span><a href="#">[每日签到]</a></li>
+				<li>每月累计签到满10次，即可获得5蜜豆</li>
+			</ul>
+			<ul class="right">
+				<li><a href="#">登录</a>　|</li>
+				<li><a href="#">注册</a></li>
+				<li><span class="ico-3"></span><a href="#">手机APP</a></li>
+				<li><span class="ico-4"></span><a href="#">在线客服</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="serch">
+		<div class="logo">
+			<a href="index.html"><img src="img/logo.png" alt="美美箱首页"></a>
+		</div>
+		<div class="serchs">
+			<input type="text"><span class="serch-ico"></span>
+		</div>
+		<div class="appdown">
+			<a href="">
+				<span class="appdownbg"></span>
+				<img src="img/qrdownloadcode.png" alt="扫一扫">
+			</a>
+		</div>
+	</div>
+
+	<div class="navbg">
+		<div>
+			<ul class="nav">
+				<li class="navlist" id="product">
+					<a href="#" class="sort nav-a"><span class="icon-menu"></span>商品分类</a>
+					<ul class="product2">
+						<li class="product-list product-list1">
+							<a href="#" class="mian-color">面膜</a>
+							<ul class="product-list1-ul">
+								<li><a href="#">贴片式面膜</a></li>
+								<li><a href="#">免洗面膜</a></li>
+								<li><a href="#">水洗面膜</a></li>
+								<li><a href="#">撕拉面膜</a></li>
+								<li><a href="#">其他</a></li>
+							</ul>
+						</li>
+						<li class="product-list">
+							<a href="#" class="mian-color">洁面卸妆</a>
+							<ul>
+								<li><a href="#">洁面乳</a></li>
+								<li><a href="#">面部去角质/磨砂</a></li>
+								<li><a href="#">洁面膏/皂/粉</a></li>
+								<li><a href="#">洁面啫喱/慕斯/泡沫</a></li>
+								<li><a href="#">卸妆</a></li>
+								<li><a href="#">其他</a></li>
+							</ul>
+						</li>
+						<li class="product-list">
+							<a href="#" class="mian-color">水乳/面霜/精华</a>
+							<ul>
+								<li><a href="#">爽肤水</a></li>
+								<li><a href="#">精华</a></li>
+								<li><a href="#">乳液</a></li>
+								<li><a href="#">面霜</a></li>
+								<li><a href="#">其他</a></li>
+							</ul>
+						</li>
+						<li class="product-list">
+							<a href="#" class="mian-color">个人护理</a>
+							<ul>
+								<li><a href="#">防晒</a></li>
+								<li><a href="#">沐浴</a></li>
+								<li><a href="#">洗护/美发</a></li>
+								<li><a href="#">口腔护理</a></li>
+								<li><a href="#">身体护理</a></li>
+								<li><a href="#">纤体美体</a></li>
+								<li><a href="#">精油护理</a></li>
+								<li><a href="#">私密护理</a></li>
+								<li><a href="#">其他</a></li>
+							</ul>
+						</li>
+						<li class="product-list">
+							<a href="#" class="mian-color">底妆/修容</a>
+							<ul>
+								<li><a href="#">隔离霜/妆前乳</a></li>
+								<li><a href="#">BB/CC霜</a></li>
+								<li><a href="#">粉底/遮瑕</a></li>
+								<li><a href="#">粉饼/蜜饼/散粉</a></li>
+								<li><a href="#">腮红/高光/修容</a></li>
+								<li><a href="#">防晒</a></li>
+								<li><a href="#">其他</a></li>
+
+							</ul>
+						</li>
+						<li class="product-list">
+							<a href="#" class="mian-color">眼唇彩妆/护理</a>
+							<ul>
+								<li><a href="#">眼线笔/液/膏</a></li>
+								<li><a href="#">睫毛膏/增长液</a></li>
+								<li><a href="#">眼影</a></li>
+								<li><a href="#">唇彩/蜜/釉/染唇膏</a></li>
+								<li><a href="#">口红</a></li>
+								<li><a href="#">眉笔/染眉/眉粉</a></li>
+								<li><a href="#">假睫毛</a></li>
+								<li><a href="#">眼唇护理</a></li>
+								<li><a href="#">其他</a></li>
+							</ul>
+						</li>
+						<li class="product-list">
+							<a href="#" class="mian-color">美甲护甲</a>
+							<ul>
+								<li><a href="#">贴片式面膜</a></li>
+								<li><a href="#">免洗面膜</a></li>
+								<li><a href="#">水洗面膜</a></li>
+								<li><a href="#">撕拉面膜</a></li>
+								<li><a href="#">其他</a></li>
+							</ul>
+						</li>
+						<li class="product-list">
+							<a href="#" class="mian-color">美护工具</a>
+							<ul>
+								<li><a href="#">贴片式面膜</a></li>
+								<li><a href="#">免洗面膜</a></li>
+								<li><a href="#">水洗面膜</a></li>
+								<li><a href="#">撕拉面膜</a></li>
+								<li><a href="#">其他</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="navlist"><a class="nav-a" href="index.html">主页</a></li>
+				<li class="navlist"><a class="nav-a" href="#">尖货<span class="ico-hot"></span></a></li>
+				<li class="navlist">
+					<a class="nav-a" href="#">面膜</a>
+					<ul class="navhide">
+						<li><a href="#">Leaders/Mediheal专区</a></li>
+						<li><a href="#">Innisfree面膜专区</a></li>
+						<li><a href="#">补水面膜专区</a></li>
+						<li><a href="#">美白面膜专区</a></li>
+						<li><a href="#">祛痘修复面膜专区</a></li>
+						<li><a href="#">动物面膜专区</a></li>
+					</ul>
+				</li>
+				<li class="navlist"><a class="nav-a" href="#">新货<span class="new-protc"></span></a></li>
+				<li class="navlist"><a class="nav-a" href="#">保税仓</a></li>
+				<li class="navlist"><a class="nav-a" href="#">直邮</a></li>
+				<li class="navlist"><a class="nav-a" href="#">礼盒</a></li>
+				<li class="navlist">
+					<a class="nav-a" href="#">PONY</a>
+					<ul class="navhide">
+						<li><a href="#">PONY EFFECT</a></li>
+						<li><a href="#">假日限量系列</a></li>
+						<li><a href="#">PONY新品</a></li>
+						<li><a href="#">PONY x MEMEBOX</a></li>
+						<li><a href="#">超值套装</a></li>
+					</ul>
+				</li>
+				<li class="navlist"><a class="nav-a" href="#">美美妆</a></li>
+				<li class="navlist">
+					<a class="nav-a" href="#">I'M MEME</a>
+					<ul class="navhide">
+						<li><a href="#">我爱眼妆</a></li>
+						<li><a href="#">我爱唇妆</a></li>
+						<li><a href="#">我爱眼妆</a></li>
+						<li><a href="#">我爱唇妆</a></li>
+						<li><a href="#">我爱眼妆</a></li>
+						<li><a href="#">我爱唇妆</a></li>
+					</ul>
+				</li>
+				<li class="navlist"><a class="nav-a" href="#">K-BEAUTY STYLE<span class="ico-new"></span></a></li>
+			</ul>
+		</div>
+
+	</div>
+
+
+	<div class="banner">
+		<div class="bannerbox">
+			<div class="bannerimg">
+				<ul class="banner-list">
+					<li><a href="#####"><img src="img/banner1.jpg" alt=""></a></li>
+					<li><a href="#####"><img src="img/banner2.jpg" alt=""></a></li>
+					<li><a href="#####"><img src="img/banner3.jpg" alt=""></a></li>
+					<li><a href="#####"><img src="img/banner4.jpg" alt=""></a></li>
+					<li><a href="#####"><img src="img/banner5.jpg" alt=""></a></li>
+					<li><a href="#####"><img src="img/banner6.jpg" alt=""></a></li>
+					<li><a href="#####"><img src="img/banner7.jpg" alt=""></a></li>
+					<li><a href="#####"><img src="img/banner8.jpg" alt=""></a></li>
+					<li><a href="#####"><img src="img/banner9.jpg" alt=""></a></li>
+					<li><a href="#####"><img src="img/banner10.jpg" alt=""></a></li>
+					<li><a href="#####"><img src="img/banner11.jpg" alt=""></a></li>
+					<li><a href="#####"><img src="img/banner12.jpg" alt=""></a></li>
+				</ul>
+			</div>
+			<ul class="banner-btn">
+				<li style="background:#ff5073;"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</div>
+	<div style="clear:both"></div>
+	<div class="barnd-1">
+		<h3>活动 Hot Promotion 每天<strong>10</strong>点上新，逛MEMEBOX从活动先来！</h3>
+		<ul>
+			<li><a href="###"><img src="img/20169129290.jpg" alt=""></a></li>
+			<li><a href="#"><img src="img/20169139.jpg" alt=""></a></li>
+			<li><a href="#"><img src="img/20169910.jpg" alt=""></a></li>
+			<li><a href="#"><img src="img/201691250.jpg" alt=""></a></li>
+			<li><a href="#"><img src="img/201691410 (2).jpg" alt=""></a></li>
+			<li><a href="#"><img src="img/201691410.jpg" alt=""></a></li>
+			<li><a href="#"><img src="img/201691493c.jpg" alt=""></a></li>
+			<li><a href="#"><img src="img/2016914213.jpg" alt=""></a></li>
+			<li><a href="#"><img src="img/2016914939.jpg" alt=""></a></li>
+			<li><a href="#"><img src="img/20169139320.jpg" alt=""></a></li>
+			<li><a href="#"><img src="img/20169141250.jpg" alt=""></a></li>
+			<li><a href="#"><img src="img/20169992331.jpg" alt=""></a></li>
+			<li><a href="#"><img src="img/201691393240.jpg" alt=""></a></li>
+			<li><a href="#"><img src="img/201691293001176-250.jpg" alt=""></a></li>
+		</ul>
+	</div>
+	<div class="barnd-2">
+		<h3>新品尝鲜 每天<strong>10</strong>点上新，逛MEMEBOX从闪购开始！</h3>
+		<p><a href="#"><img src="img/file_14.jpg" alt=""></a></p>
+	</div>
+
+	<div class="content clearfix">
+			<ul class="products-list">
+				<li class="clearfix">
+					<span class="goods-icon-wrap"></span>
+					<a href="#" class="product-list-img">
+						<img src="img/00159_111_2.jpg" alt="轻松描绘美唇笔">
+						<h4>Pony Effect</h4>
+						<h3>轻松描绘美唇笔</h3>
+					</a>
+					<div class="details-price">
+						<div class="price">
+							<p class="preset-price"><span>￥</span>69.00</p>
+							<div class="market-price">
+								<p class="old-price"><del>￥108.00</del></p>
+								<p class="sav-price">立省￥39.00</p>
+							</div>
+						</div>
+						<button type="button" title="加入购物车" class="add-btn">加入购物车</button>
+					</div>
+				</li>
+				<li class="clearfix">
+					<span class="goods-icon-wrap"></span>
+					<a href="#" class="product-list-img">
+						<img src="img/00159_111_2.jpg" alt="轻松描绘美唇笔">
+						<h4>Pony Effect</h4>
+						<h3>轻松描绘美唇笔</h3>
+					</a>
+					<div class="details-price">
+						<div class="price">
+							<p class="preset-price"><span>￥</span>69.00</p>
+							<div class="market-price">
+								<p class="old-price"><del>￥108.00</del></p>
+								<p class="sav-price">立省￥39.00</p>
+							</div>
+						</div>
+						<button type="button" title="加入购物车" class="add-btn">加入购物车</button>
+					</div>
+				</li>
+				<li class="clearfix">
+					<span class="goods-icon-wrap"></span>
+					<a href="#" class="product-list-img">
+						<img src="img/00159_111_2.jpg" alt="轻松描绘美唇笔">
+						<h4>Pony Effect</h4>
+						<h3>轻松描绘美唇笔</h3>
+					</a>
+					<div class="details-price">
+						<div class="price">
+							<p class="preset-price"><span>￥</span>69.00</p>
+							<div class="market-price">
+								<p class="old-price"><del>￥108.00</del></p>
+								<p class="sav-price">立省￥39.00</p>
+							</div>
+						</div>
+						<button type="button" title="加入购物车" class="add-btn">加入购物车</button>
+					</div>
+				</li>
+				<li class="clearfix">
+					<span class="goods-icon-wrap"></span>
+					<a href="#" class="product-list-img">
+						<img src="img/00159_111_2.jpg" alt="轻松描绘美唇笔">
+						<h4>Pony Effect</h4>
+						<h3>轻松描绘美唇笔</h3>
+					</a>
+					<div class="details-price">
+						<div class="price">
+							<p class="preset-price"><span>￥</span>69.00</p>
+							<div class="market-price">
+								<p class="old-price"><del>￥108.00</del></p>
+								<p class="sav-price">立省￥39.00</p>
+							</div>
+						</div>
+						<button type="button" title="加入购物车" class="add-btn">加入购物车</button>
+					</div>
+				</li>
+				<li class="clearfix">
+					<span class="goods-icon-wrap"></span>
+					<a href="#" class="product-list-img">
+						<img src="img/00159_111_2.jpg" alt="轻松描绘美唇笔">
+						<h4>Pony Effect</h4>
+						<h3>轻松描绘美唇笔</h3>
+					</a>
+					<div class="details-price">
+						<div class="price">
+							<p class="preset-price"><span>￥</span>69.00</p>
+							<div class="market-price">
+								<p class="old-price"><del>￥108.00</del></p>
+								<p class="sav-price">立省￥39.00</p>
+							</div>
+						</div>
+						<button type="button" title="加入购物车" class="add-btn">加入购物车</button>
+					</div>
+				</li>
+				<li class="clearfix">
+					<span class="goods-icon-wrap"></span>
+					<a href="#" class="product-list-img">
+						<img src="img/00159_111_2.jpg" alt="轻松描绘美唇笔">
+						<h4>Pony Effect</h4>
+						<h3>轻松描绘美唇笔</h3>
+					</a>
+					<div class="details-price">
+						<div class="price">
+							<p class="preset-price"><span>￥</span>69.00</p>
+							<div class="market-price">
+								<p class="old-price"><del>￥108.00</del></p>
+								<p class="sav-price">立省￥39.00</p>
+							</div>
+						</div>
+						<button type="button" title="加入购物车" class="add-btn">加入购物车</button>
+					</div>
+				</li>
+				<li class="clearfix">
+					<span class="goods-icon-wrap"></span>
+					<a href="#" class="product-list-img">
+						<img src="img/00159_111_2.jpg" alt="轻松描绘美唇笔">
+						<h4>Pony Effect</h4>
+						<h3>轻松描绘美唇笔</h3>
+					</a>
+					<div class="details-price">
+						<div class="price">
+							<p class="preset-price"><span>￥</span>69.00</p>
+							<div class="market-price">
+								<p class="old-price"><del>￥108.00</del></p>
+								<p class="sav-price">立省￥39.00</p>
+							</div>
+						</div>
+						<button type="button" title="加入购物车" class="add-btn">加入购物车</button>
+					</div>
+				</li>
+				<li class="clearfix">
+					<span class="goods-icon-wrap"></span>
+					<a href="#" class="product-list-img">
+						<img src="img/00159_111_2.jpg" alt="轻松描绘美唇笔">
+						<h4>Pony Effect</h4>
+						<h3>轻松描绘美唇笔</h3>
+					</a>
+					<div class="details-price">
+						<div class="price">
+							<p class="preset-price"><span>￥</span>69.00</p>
+							<div class="market-price">
+								<p class="old-price"><del>￥108.00</del></p>
+								<p class="sav-price">立省￥39.00</p>
+							</div>
+						</div>
+						<button type="button" title="加入购物车" class="add-btn">加入购物车</button>
+					</div>
+				</li>
+				<li class="clearfix">
+					<span class="goods-icon-wrap"></span>
+					<a href="#" class="product-list-img">
+						<img src="img/00159_111_2.jpg" alt="轻松描绘美唇笔">
+						<h4>Pony Effect</h4>
+						<h3>轻松描绘美唇笔</h3>
+					</a>
+					<div class="details-price">
+						<div class="price">
+							<p class="preset-price"><span>￥</span>69.00</p>
+							<div class="market-price">
+								<p class="old-price"><del>￥108.00</del></p>
+								<p class="sav-price">立省￥39.00</p>
+							</div>
+						</div>
+						<button type="button" title="加入购物车" class="add-btn">加入购物车</button>
+					</div>
+				</li>
+			</ul>
+	</div>
+	<!-- 底部 -->
+	<div class="footer-container">
+		<div class="footer-topbg">
+			<div class="footer-top">
+				<div class="foot">
+					<img src="img/genuine.png" alt="100%正品">
+					<h3>100%正品</h3>
+				</div>
+				<div class="foot">
+					<img src="img/low.png" alt="100%正品">
+					<h3>优质低价</h3>
+				</div>
+				<div class="foot">
+					<img src="img/deliver.png" alt="100%正品">
+					<h3>极速发货</h3>
+				</div>
+				<div class="foot">
+					<img src="img/refund.png" alt="100%正品">
+					<h3>退换无忧</h3>
+				</div>
+			</div>
+		</div>
+		<div class="footer-center clearfix">
+			<div class="footer-1">
+				<p class="footer-pic"><img src="img/szj.jpg" alt=""></p>
+				<h3>关于我们</h3>
+				<p>
+					<img class="erweima" src="img/meme.png" alt="美美箱">
+					<img class="erweima" src="img/wechat.png" alt="美美箱">
+					<img class="erweima" src="img/sina.png" alt="美美箱">
+				</p>
+			</div>
+			
+			<div class="footer-2 servers">
+				<h2>关于美美箱</h2>
+				<ul>
+					<li><a href="#">美美全球</a></li>
+					<li><a href="#">品牌优势</a></li>
+					<li><a href="#">消费保障</a></li>
+
+				</ul>
+			</div>
+
+			<div class="footer-3 servers">
+				<h2>帮助中心</h2>
+				<ul>
+					<li><a href="#">常见问题</a></li>
+					<li><a href="#">账户相关</a></li>
+					<li><a href="#">包邮政策</a></li>
+					<li><a href="#">支付相关</a></li>
+					<li><a href="#">物流相关</a></li>
+					<li><a href="#">退换政策</a></li>
+					
+				</ul>
+			</div>
+
+			<div class="footer-4 servers">
+				<h2>服务协议</h2>
+				<ul>
+					<li><a href="#">服务协议</a></li>
+					<li><a href="#">个人网申协议</a></li>
+				</ul>
+			</div>
+
+			<div class="footer-5 servers">
+				<h2>联系我们</h2>
+				<ul>
+					<li><a href="#">商务合作</a></li>
+					<li><a href="#">分销合作</a></li>
+					<li><a href="#">加入我们</a></li>
+
+				</ul>
+			</div>
+			
+		</div>
+		<div class="footer-bottom">
+			<h3>联系客服</h3>
+			<p>
+				<span>客服时间 : 周一~周日(9:00 - 21:00) </span>
+				<span>客服热线: 400-720-9967 </span>
+				<span>客服邮箱 :kf@memeboxglobal.com</span>
+			</p>
+		</div>
+		<div class="copyright">
+			<p class="p1">© 2015 Memebox Corporation. All Rights Reserved.</p>
+			<p class="p2"><span><a href="#"><img src="img/icon.gif" alt=""></a></span><span>蜜米柏克思（上海）商贸有限公司 上海市杨浦区政立路415号中航天盛广场A座6楼 沪ICP备14043341号</span></p>
+		</div>
+	</div>
+</body>
+</html>
