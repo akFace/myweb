@@ -62,7 +62,7 @@ $(function(){
 		$(this).find('.mian-color').css('color','#ffffff');
 		$(this).find('ul').hide();
 	});
-	//导航下拉菜单
+	//导航下拉菜单-------------------------------------------
 	var $navlist = $('.navlist');
 	$navlist.on('mouseenter',function(){
 		$(this).find('.navhide').fadeIn();
@@ -70,5 +70,79 @@ $(function(){
 	$navlist.on('mouseleave',function(){
 		$(this).find('.navhide').fadeOut();
 	});
+
+	//购物车弹出效果-----------------------------------------
+	$('#cart-panel').on('click',function(){
+		$('.sidebar-box').animate({
+			right:'41px'
+		});
+	});
+	$('.close-cart').on('click',function(){
+		$('.sidebar-box').animate({
+			right:'-321px'
+		});
+	});
+	//个人中心弹出效果-------------------------------------
+	var $pophover = $('.pophover');
+	var $pophover2 = $('.pophover2');
+	var $tips = $('.tips');
+	var $tips2 = $('.tips2');
+	$pophover.on('mouseenter',function(){
+		var num = $(this).index();
+		$tips.eq(num).show();
+		
+		$tips.eq(num).animate({
+			display:'block',
+			opacity:'1',
+			left:'-92px',
+		});
+	});
+	$pophover.on('mouseleave',function(){
+		$tips.css({
+			display:'none',
+			opacity:'0',
+			left:'-150px',
+		});
+	});
+
+	//返回顶部和在线客服
+	$pophover2.on('mouseenter',function(){
+		var num = $(this).index();
+		console.log(num);
+		$tips2.eq(num).show();
+		$tips2.eq(num).animate({
+			display:'block',
+			opacity:'1',
+			left:'-92px',
+		});
+	});
+
+	$pophover2.on('mouseleave',function(){
+		$tips2.css({
+			display:'none',
+			opacity:'0',
+			left:'-150px',
+		});
+	});
+
+	//返回顶部
+	$(window).on('scroll',function(){
+		var scrollTop = $(window).scrollTop();
+		if (scrollTop>=400) {
+			$('.display-none').show(200);
+		}else {
+			$('.display-none').hide(200);
+		}
+	});
+	$('.display-none').on('click',function(){
+		$('html,body').animate({
+			scrollTop:0
+		});
+	});
+
+	//加入购物车
+
+
+
 
 });
