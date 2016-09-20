@@ -108,7 +108,7 @@ $(function(){
 	//返回顶部和在线客服
 	$pophover2.on('mouseenter',function(){
 		var num = $(this).index();
-		console.log(num);
+		//console.log(num);
 		$tips2.eq(num).show();
 		$tips2.eq(num).animate({
 			display:'block',
@@ -141,8 +141,5 @@ $(function(){
 	});
 
 	//加入购物车
-
-
-
 
 });
