@@ -46,7 +46,15 @@ $(function(){
 			}
 		});
 
-	}
+	};
+
+	//搜索框获得焦点------------------
+	$('#serch').on('focus',function(){
+		$('.serchs').css({border:'2px solid #ff5073',marginTop:'29px'});
+	});
+	$('#serch').on('blur',function(){
+		$('.serchs').css({border:'1px solid #ff5073',marginTop:'30px'});
+	});
 
 	//首页菜单-----------------------------------------------
 	var $productlist = $('.product-list');

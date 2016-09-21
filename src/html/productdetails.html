@@ -6,6 +6,10 @@
 	<link rel="stylesheet" type="text/css" href="../css/reset.css" />
 	<link rel="stylesheet" type="text/css" href="../css/common.css" />
 	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<script src="../assets/jquery/jquery-1.12.0.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/index.js"></script>
+	<script src="../js/content.js"></script>
 </head>
 <body>
 	<div class="topbg">
@@ -29,7 +33,7 @@
 			<a href="index.html"><img src="../img/logo.png" alt="美美箱首页"></a>
 		</div>
 		<div class="serchs">
-			<input type="text"><span class="serch-ico"></span>
+			<input type="text" id="serch"><span class="serch-ico"></span>
 		</div>
 		<div class="appdown">
 			<a href="">
@@ -86,10 +90,10 @@
 				</li>
 				<li class="navlist"><a class="nav-a" href="#">K-BEAUTY STYLE<span class="ico-new"></span></a></li>
 			</ul>
-
+			<!-- 商品分类页 -->
 			<div class="fenlei clearfix">
-				<ul class="product2">
-					<li class="product-list">
+				<ul class="product3">
+					<li class="fenlei-list">
 						<a href="#" class="mian-color">面膜</a>
 						<ul>
 							<li><a href="#">贴片式面膜</a></li>
@@ -99,7 +103,7 @@
 							<li><a href="#">其他</a></li>
 						</ul>
 					</li>
-					<li class="product-list">
+					<li class="fenlei-list">
 						<a href="#" class="mian-color">洁面卸妆</a>
 						<ul>
 							<li><a href="#">贴片式面膜</a></li>
@@ -109,7 +113,7 @@
 							<li><a href="#">其他</a></li>
 						</ul>
 					</li>
-					<li class="product-list">
+					<li class="fenlei-list">
 						<a href="#" class="mian-color">水乳/面霜/精华</a>
 						<ul>
 							<li><a href="#">贴片式面膜</a></li>
@@ -119,7 +123,7 @@
 							<li><a href="#">其他</a></li>
 						</ul>
 					</li>
-					<li class="product-list">
+					<li class="fenlei-list">
 						<a href="#" class="mian-color">个人护理</a>
 						<ul>
 							<li><a href="#">贴片式面膜</a></li>
@@ -129,7 +133,7 @@
 							<li><a href="#">其他</a></li>
 						</ul>
 					</li>
-					<li class="product-list close-position">
+					<li class="fenlei-list close-position">
 						<span class="close-productlist">&times</span>
 						<a href="#" class="mian-color">底妆/修容</a>
 						<ul>
@@ -140,7 +144,7 @@
 							<li><a href="#">其他</a></li>
 						</ul>
 					</li>
-					<li class="product-list">
+					<li class="fenlei-list">
 						<a href="#" class="mian-color">眼唇彩妆/护理</a>
 						<ul>
 							<li><a href="#">贴片式面膜</a></li>
@@ -150,7 +154,7 @@
 							<li><a href="#">其他</a></li>
 						</ul>
 					</li>
-					<li class="product-list">
+					<li class="fenlei-list">
 						<a href="#" class="mian-color">美甲护甲</a>
 						<ul>
 							<li><a href="#">贴片式面膜</a></li>
@@ -160,7 +164,7 @@
 							<li><a href="#">其他</a></li>
 						</ul>
 					</li>
-					<li class="product-list">
+					<li class="fenlei-list">
 						<a href="#" class="mian-color">美护工具</a>
 						<ul>
 							<li><a href="#">贴片式面膜</a></li>
@@ -186,11 +190,11 @@
 					<span class="openpic">变焦</span>
 				</div>
 				<div class="smallpic">
-					<ul class="clearfix">
+					<ul class="allsmallpic clearfix">
 						<li><img src="img/file_147.jpg" alt="" width="65" height="65"></li>
-						<li><img src="img/file_147.jpg" alt="" width="65" height="65"></li>
-						<li><img src="img/file_147.jpg" alt="" width="65" height="65"></li>
-						<li><img src="img/file_147.jpg" alt="" width="65" height="65"></li>
+						<li><img src="img/ds358-1.jpg" alt="" width="65" height="65"></li>
+						<li><img src="img/ds358-4.jpg" alt="" width="65" height="65"></li>
+						<li><img src="img/ds358-7.jpg" alt="" width="65" height="65"></li>
 					</ul>
 				</div>
 			</div>
@@ -328,8 +332,62 @@
 			<div class="about"></div>
 		</div>
 	</div>
-
-
+	<!-- 弹窗查看图片 -->
+	<div class="overlay">
+		<div class="imgauto">
+			<div class="relative">
+				<img src="" alt="">
+				<ul class="img-dingwei">
+					<li class="prev">&lt;</li>
+					<li class="next">&gt;</li>
+					<li class="pic-num"><span class="pic-numfst">1/</span><span>10</span></li>
+				</ul>
+				<span class="close-pic">&times</span>
+			</div>
+		</div>
+	</div>
+	<!-- 侧边栏 -->
+	<div class="sidebar">
+		<div class="sidecart">
+			<a href="###" id="cart-panel">
+                <span class="ico-siadecart"></span>
+				<span class="cart-text">购物车</span>
+            </a>
+		</div>
+		<div class="usercart">
+			<ul class="relative">
+				<li class="pophover"><a href="###"><span class="icon-usercart1"></span></a></li>
+				<li class="pophover"><a href="###"><span class="icon-usercart2"></span></a></li>
+				<li class="pophover"><a href="###"><span class="icon-usercart3"></span></a></li>
+				<li><p class="tips person-text"><span class="arrow"></span>个人中心</p></li>
+				<li><p class="tips shoucang-text"><span class="arrow"></span>我的收藏</p></li>
+				<li><p class="tips dingdan-text"><span class="arrow"></span>我的订单</p></li>
+			</ul>
+		</div>
+		
+		<div class="gotop">
+			<div>
+				<ul class="relative">
+					<li class="pophover2"><a href="###"><span class="icon-contact "></span></a></li>
+					<li class="pophover2 display-none"><a href="###"><span class="icon-top"></span></a></li>
+					<li><p class="tips kefu-text tips2"><span class="arrow"></span>在线客服</p></li>
+					<li><p class="tips top-text tips2"><span class="arrow"></span>返回顶部</p></li>
+				</ul>
+			</div>
+		</div>
+		<!-- 购物车盒子 -->
+		<div class="sidebar-box">
+			<div class="sidebar-box-title">
+				<span class="close-text">购物车</span>
+				<span class="close-cart">&times</span>
+			</div>
+			<div class="sidebar-goods">
+				<div class="sidebar-goods-text">亲！购物车很空</div>
+				
+			</div>
+		</div>
+		
+	</div>
 	<!-- 底部 -->
 	<div class="footer-container">
 		<div class="footer-topbg">
