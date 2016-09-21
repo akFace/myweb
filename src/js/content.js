@@ -79,6 +79,13 @@ $(function(){
 
 
 	//详情页------------------------------------
+
+	//放大镜---------------------------------------
+	// 实现放大镜效果
+	$('.pic').lxzoom({
+		width:500,
+		height:400
+	})
 	//详情页的大图与小图切换
 	$('.smallpic').on('click','li',function(){
 		$('.pic').find('img').attr('src',$(this).find('img').attr('src'));
@@ -139,5 +146,20 @@ $(function(){
 		}
 		console.log('下一张'+n);
 	});
+
+
+	//详情页的tab选项切换
+	var $tab = $('.tab');
+	var $tablist = $('.tablist');
+	$('.tab-list').on('click','li',function(){
+		var index = $(this).index();
+		console.log(index);
+		$tab.removeClass('active');
+		$(this).find('span').addClass('active');
+		$tablist.hide();
+		$tablist.eq(index).show();
+
+	});
+	//-----------------------------------------------
 
 });
