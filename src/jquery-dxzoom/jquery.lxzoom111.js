@@ -1,23 +1,18 @@
-
-//调用低下放大镜工具
+// jQuery.prototype = jQuery.fn
 $(function(){
 	//放大镜---------------------------------------
 	// 实现放大镜效果
 	$('.pic').lxzoom({
 		width:500,
-		height:400,
-		gap:50
+		height:400
 	});
 });
-
-
-// jQuery.prototype = jQuery.fn
 ;(function($){
 	$.fn.lxzoom = function(opts){
 		// 这里的this指向jquery实例（选择器得到的对象）
 		var defaults = {
 			position:'right',//大图显示的位置
-			gap:40,//小图与大图的距离
+			gap:50,//小图与大图的距离
 			width:300,
 			height:200,
 		}
@@ -87,7 +82,7 @@ $(function(){
 
 
 				// 定位大图
-				var bigPos = {left:minPos.left*ratio,top:minPos.top*ratio};
+				var bigPos = {left:oLeft*ratio-200,top:oTop*ratio-100};
 
 				// 判断大图到底后不再移动
 				if(bigPos.top >= $bigPic.outerHeight()-$bigWrap.outerHeight()){
@@ -110,30 +105,26 @@ $(function(){
 			function init(src){
 				// 生成html结构
 				$bigPic = $('<img/>').attr('src',src);
-				$bigPic.load(function(){
-					// 大图加载完后计算比率
-					ratio = $bigPic.outerWidth()/$smallPic.outerWidth();
-
-					// 设置放大镜尺寸（与大图可视区域长宽比相同）
-					$minZoom = $('<span/>').addClass('minzoom').css({
-						width:opt.width/ratio,
-						height:opt.height/ratio
-					}).appendTo($self);
-				});
 				$bigWrap = $('<div/>').addClass('lxbzoom').append($bigPic).appendTo('body');
 
 				if(opt.position == 'right'){
 					var left = smallPicPos.x + $self.outerWidth() + opt.gap;
 					var top = smallPicPos.y;
+					
 				}
-
 				$bigWrap.css({
 					left:left,
 					top:top,
 					width:opt.width,
 					height:opt.height
-				});
-				
+				})
+
+				$minZoom = $('<span/>').addClass('minzoom').appendTo($self);
+
+				// $bigPic.load(function(){
+					ratio = $bigPic.outerHeight()/$smallPic.outerHeight();
+					console.log(ratio);
+				// })
 			}
 
 			function remove(){

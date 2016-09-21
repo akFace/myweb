@@ -22,7 +22,11 @@
 .banner-list { position:absolute; top: 0;left: 0;}
 .banner-list li {width: 1920px;float: left;margin: 0 auto;}
 .banner-btn { position: absolute;left: 50%;margin-left: -160px; bottom: 10px;z-index: 12; }
-.banner-btn li { width: 15px;height: 15px;background: #fff;border-radius: 50%;float: left; margin: 0 7px;cursor: pointer;}
+.banner-btn li { width: 15px;height: 15px;background: #fff;border-radius: 50%;float: left; margin: 0 7px;cursor: pointer;
+	transition: 0.5s;
+	-moz-transition: 0.5s;	/* Firefox 4 */
+	-webkit-transition: 0.5s;	/* Safari 和 Chrome */
+	-o-transition: 0.5s;	/* Opera */}
 .banner-btn li:hover { background: #ff5073!important; }
 
 /*--------推荐区---------*/
@@ -36,7 +40,10 @@
 /*---------首页商品列表----------*/
 .content { width: 1172px;margin: 0 auto; margin-top: 10px;}
 .products-list { width: 110%; }
-.products-list li { width: 350px;position: relative; text-align: center; float: left;margin-right:61px;margin-bottom:61px;}
+.products-list li { width: 350px;position: relative; text-align: center; float: left;margin-right:61px;margin-bottom:61px;transition: 0.5s;
+	-moz-transition: 0.5s;	/* Firefox 4 */
+	-webkit-transition: 0.5s;	/* Safari 和 Chrome */
+	-o-transition: 0.5s;	/* Opera */}
 .products-list li:hover { box-shadow:0 0 15px #ccc; }
 .product-list-img img { display: block; width: 270px;height: 270px; padding: 40px 40px 0 40px; }
 .product-list-img h3,.product-list-img h4 { padding-left: 40px; text-align: left; color: #2d2d2d;line-height: 30px;font-size: 19px;}

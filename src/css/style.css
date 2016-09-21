@@ -21,13 +21,20 @@
 .product-list-top p { float: left; font-size: 14px;color: #333;}
 .product-list-top p em { color: #ccc; }
 #product-sort { float: left; margin: 10px 0 0 10px; height: 36px; border: 1px solid #ddd;padding: 8px;color: #333}
-.icon-sort { display: block;width:30px;height: 30px;background: url(ico-img/pix.png) no-repeat 0px -90px;position: absolute;top: 18px;left: 220px;}
+.icon-sort { display: block;width:30px;height: 30px;background: url(ico-img/pix.png) no-repeat 0px -90px;position: absolute;top: 18px;left: 220px;cursor: pointer;
+    transition: 0.5s;
+	-moz-transition: 0.5s;	/* Firefox 4 */
+	-webkit-transition: 0.5s;	/* Safari 和 Chrome */
+	-o-transition: 0.5s;	/* Opera */}
 .icon-sort:hover {background:#000 url(ico-img/pix.png) no-repeat -30px -87px; }
 
 /*-------------------商品内容列表--------------------*/
 .product-listwarp { margin-top: 5px; }
 .product-listwarp ul { border-bottom: 1px solid #ddd; padding-bottom: 20px; }
-.item {width: 23%; padding: 22px 10px 20px 10px; border-top: 1px solid #e5e5e5; text-align: center; float: left;margin-top: 15px;}
+.item {width: 23%; padding: 22px 10px 20px 10px; border-top: 1px solid #e5e5e5; text-align: center; float: left;margin-top: 15px;transition: 0.5s;
+	-moz-transition: 0.5s;	/* Firefox 4 */
+	-webkit-transition: 0.5s;	/* Safari 和 Chrome */
+	-o-transition: 0.5s;	/* Opera */}
 .item:hover { box-shadow: 0 0 20px rgba(0,0,0,0.2); }
 .content-img { position: relative; }
 .content-img img { width: 264px ; height: 264px;}
@@ -112,6 +119,10 @@
 .input { width: 48px;height: 26px ;float: left; text-align: center;color: #666;border: 1px solid #ddd; background: #fff;}
 
 .cart-box { clear: both; padding-top: 30px; }
+.cart-box button{ transition: 0.3s;
+	-moz-transition: 0.3s;	/* Firefox 4 */
+	-webkit-transition: 0.3s;	/* Safari 和 Chrome */
+	-o-transition: 0.3s;	/* Opera */ }
 .cart-box button:hover { background: #ff5073; color: #fff;}
 .collection,.shoppingcart { height: 45px;width: 105px;border: 2px solid #ff5073; background: #fff;margin-right:10px; color: #ff5073;font-size: 14px;cursor: pointer;}
 
@@ -157,3 +168,72 @@
 .comment-box { padding-left: 15px; }
 .comment-box p { line-height: 23px; }
 .allstar { margin-top: 10px; }
+
+
+/*--------------购物车结算页-------------------*/
+.top-logo { width: 1172px; margin:0 auto; }
+.linner {position: absolute;top: 50px;right: 120px; display: block;width: 360px;height: 4px;background: #ddd; z-index: -1;}
+.step {width: 360px; float: right;text-align: center;position: absolute;top: 40px;right: 120px; }
+.step3 { position: absolute;top: 0;right: -158px; }
+.step li { float:left;width: 50%; }
+.step li span { display:block;width: 22px;height: 22px;border-radius: 50%;background: #ddd;line-height: 22px;color: #fff; }
+.step li span.stepactive { background: #ff5073; }
+.step li p { text-align: left;text-indent: -10px;margin-top: 8px; }
+.step3 .icon-success { background:#ddd url(ico-img/mbar-smallICon.png) no-repeat -84px -56px;}
+
+.goods-table { margin-top: 70px;text-align: center; }
+.goods-table a { color: #666; }
+.goods-table a:hover { color: #ff5073 }  
+.goods-table thead { height: 26px;line-height: 26px;background: #eee; color: #666;border: 1px solid #ddd}
+.goods-table thead th { padding: 8px 0;  }
+.th-first { text-align: left; width: 40%;color: #999}
+.th-first i {display: inline-block; width: 16px;height: 20px;background: url(ico-img/mbar-smallICon.png) no-repeat 0px -60px ; margin: 10px 0 0 10px;}
+.th-first strong { font-size: 19px;margin-left: 7px;padding-right: 7px;}
+.goods-table tbody tr { height: 111px; border: 1px solid #ddd;}
+.tb-first { text-align: left;width: 40%; padding-left: 10px;}
+.tb-first a,.tb-first img { float: left; }
+.goods-table tbody .tb-four {position: relative;left: 40px; }
+.goods-table tbody .tb-four input {height: 19px; float: left; border: 1px solid #ddd;text-align: center;}
+.goods-table tbody .tb-four button { float: left;width:19px ;height: 21px;border: 1px solid #ddd;background: #fff; }
+.goods-table tbody .tb-five { color: #ff5073; }
+.goods-table tbody .tb-last a { display: block; }
+.goods-table tbody .tb-last button { border: none;background: #fff; color: #666;line-height: 30px;cursor: pointer;}
+.goods-table tbody .tb-last button:hover { color: #ff5073; }
+.goods-table tfoot { height: 40px; border: 1px solid #ddd; line-height: 40px ;text-align: right;}
+.goods-table tfoot tr td { height: 40px; padding-right: 30px;}
+.goods-table tfoot tr td span { font-size: 23px; color: #ff5073 }
+.input-num { width: 30px; }
+
+.jiesuan {height: 60px;border: 1px solid #ddd;line-height: 60px; margin-top: 70px;background: #f5f5f5;}
+.jiesuan dl { float: right; }
+.jiesuan dl dd { float: left; }
+.jiesuan-price { margin-right: 25px; }
+.jiesuan dl dd strong { color: #ff5073;font-size: 28px; }
+.jiesuan dl dd button { height: 60px; width: 160px;border: none;background: #ff5073;color: #fff;font-size: 18px;}
+
+
+/*----------------登录界面-------------------*/
+.login-logo {width: 1172px; margin: 0 auto; margin-top: 40px;}
+.login-bg {width: 100%;height: 480px; background:url(../img/login.jpg) no-repeat center; margin-top: 40px;padding-bottom: 40px; }
+.login-box { width: 410px; height: 350px;background: #fff;position: absolute;top:90px;right: 10%;text-align: center;border: 1px solid #eee;}
+.login-form { margin-top: 90px; }
+.login-box input { width: 80%;height: 35px; margin-top: 20px; text-indent: 8px;}
+.login-box h3 { float: left; margin-top: 20px;padding-left: 35px;font-size: 16px;}
+.zhuce { float: right;margin-top: 20px; padding-right: 37px;}
+.zhuce a { color: #3d86f4; }
+#submit { background: #ff5073;color: #fff;border: none; font-size: 18px; cursor: pointer;}
+.misspassword { text-align: right; padding: 15px 35px 20px 0 ;border-bottom: 1px solid #ddd;}
+.misspassword a { color: #333; }
+.login-tips {height: 36px; position: absolute;top:55px;left: 37px; width:80%; border: 1px solid #ffd797;background:#fffff8;  text-align: left;display: none;}
+.icon-waring { display: inline-block;width:21px;height: 21px;background: url(ico-img/mbar-smallICon.png) no-repeat -193px -29px;  margin: 7px 0 0 7px;}
+.waring-text { margin: -20px 0 0 6px!important; }
+
+/*------------注册页面---------------*/
+.login-box2 { width: 410px; height: 350px;background: #fff;position: absolute;top:70px;right: 10%;text-align: center;padding-bottom: 40px;border: 1px solid #eee;}
+.login-box2 input { width: 80%;height: 35px; margin-top: 20px; text-indent: 8px;}
+.login-box2 h3 { float: left; margin-top: 20px;padding-left: 35px;font-size: 16px;}
+
+#logincode { width: 55%; float: left;margin-left: 37px;}
+#sendcode { width: 25%; float: left;border: 1px solid #ff5073;background: #fff;height: 39px;margin-left: 4px;color: #ff5073;cursor: pointer;}
+.agreement { text-align: center;padding-top: 10px; }
+.agreement a { color: #ff5073; }
