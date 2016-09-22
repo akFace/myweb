@@ -155,11 +155,18 @@ $(function(){
 	});
 	//-----------飞（加）入购物车------------------------------------
 	//利用时间委托才能查找到ajax请求回来的数据
-	var m = 0 ;
-	var price = 0 ;
+	var $pricetoal = $('.h4-2').find('span')
+	console.log($pricetoal.text());
+	var $goodstoal = $('.h4-1').find('span')
+	var m = 0 ;//商品数量
+	var pricetoal = 0 ;//购物车商品总价
+	var oldprice;//元购物车盒子的总价
+
 	$('.list').on('click','button',function(){
+		$('.cart-num').css('opacity','1');
 		$('.goto').show();
 		var $sidecart = $('.ico-siadecart');
+
 		//console.log( $(this).parents('div').prevAll('.content-img').find('img') );
 		var $thisImg = $(this).parents('div').prevAll('.content-img').find('img') ;
 		var $minimg = $(this).parents('div').prevAll('.content-img').find('a').clone() ;
@@ -169,13 +176,22 @@ $(function(){
 		var price = $(this).parents('div').prevAll('.price-box').find('.save-price').text() ;
 		//console.log(parseInt(price.slice(1,-1)));
 	    price = parseInt(price.slice(1,-1));
-	    if (price == price) {
-	    	
-	    }
-		price+=price;//总价格
+
+	    var pricestr = $pricetoal.text()
+		if (pricestr=='0'||pricestr=='￥0.00'||pricestr=='0.00') {
+			console.log(oldprice);
+			oldprice=0;
+			pricetoal = price+oldprice;
+			$pricetoal.html('￥'+pricetoal+'.00');
+		}else {
+			oldprice = parseInt(pricestr.slice(1,-1) );
+			pricetoal+=price;//总价格
+			$pricetoal.html('￥'+pricetoal+'.00');
+		}
+		
 		++m;
-		$('.h4-1').find('span').html(m);
-		$('.h4-2').find('span').html('￥'+price+'.00');
+		$goodstoal.html(m);
+		$('.cart-num').html(m);
 		//console.log( $(this).parents('div').prevAll('.content-img').find('img') .width());
 		$cloneImg.css({
 			position:'absolute',
@@ -214,5 +230,26 @@ $(function(){
 		});
 
 	});
+
+	//侧边购物车删除商品按钮
+	$('.sidebar-goods').on('click','.icon-del',function(){
+		var nowpric =parseInt( $pricetoal.html().slice(1,-1) );
+		--m;
+		$goodstoal.html(m);
+		$('.cart-num').html(m);
+		var delprice = $(this).prevAll('.save-price').html()
+		delprice = parseInt(delprice.slice(1,-1));
+		nowpric -= delprice;
+		//console.log($(this).prevAll('.save-price').html());
+		$pricetoal.html('￥'+nowpric+'.00');
+		$(this).parent('.goodsDiv').remove();
+		if ($('.goodsDiv').length<=0) {
+			$('.cart-num').html('').css('opacity','0');
+			$('.goto').hide();
+			$('.sidebar-goods-text').html('亲！购物车很空！');
+		}
+	});
+
+	//去结算||cookie的使用
 
 });

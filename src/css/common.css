@@ -62,6 +62,7 @@
 .sidebar a:hover { background: #ed145b }
 .ico-siadecart{width: 30px;height: 20px; background: url(ico-img/mbar-smallICon.png) no-repeat; margin-left: 6px;}
 .cart-text {width: 10px;padding: 10px 0 0 12px;line-height: 16px;font-size: 14px;}
+#cart-panel .cart-num { display: block;width: 20px;height: 20px;line-height: 20px; background: #ed145b;color: #fff;border-radius: 50%;text-align: center;margin: 5px 0 0 10px; opacity: 0;}
 
 .usercart{position: absolute;top: 50%;right: 0;margin-top: -80px; text-align: center;}
 .usercart ul li {margin-top: 4px; }
@@ -85,7 +86,7 @@
 .icon-top{height: 30px; background-position: 0 -28px;}
 
 /*侧边购物车盒子*/
-.sidebar-box {width:280px ;height: 100%; position: fixed;top: 0;right: -321px;background: #fff;z-index: 100; color: #333; overflow: auto;}/* right:41px/-321px; */
+.sidebar-box {width:280px ;height: 100%; position: fixed;top: 0;right: -321px;background: #fff;z-index: 100; color: #333; overflow: auto;border-left: 5px solid rgba(100,100,100,0.1);}/* right:41px/-321px; */
 .sidebar-box-title { height: 40px;line-height: 38px;border-bottom: 1px solid #ddd; }
 .sidebar-goods-text {text-align: center; margin-top:20px;  }
 .close-text { float: left; font-size: 16px; text-indent: 10px;}
@@ -94,9 +95,9 @@
 .goto .h4-1 { float: left; padding-left: 7px;}
 .goto .h4-1 span { color: #ff5073; }
 .goto .h4-2 { float: right; }
-.goto .h4-2 span { color: #ff5073;font-size: 16px; }
+.goto .h4-2 span { color: #ff5073;font-size: 19px; }
 .goto p { clear: both; width: 80%;height: 42px; line-height: 42px ;padding: 20px 0 0 20px;}
-.goto p a {display: block;background: #ff5073; color: #fff;border-radius: 4px; }
+.goto p a {display: block;background: #ff5073; color: #fff;border-radius: 4px; font-size: 16px;}
 
 .sidebar-goods img { width: 88px;height: 95px;float: left; }
 .goodsDiv { border-bottom: 1px solid #ddd;padding: 15px 0;}
