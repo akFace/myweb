@@ -179,7 +179,6 @@ $(function(){
 
 	    var pricestr = $pricetoal.text()
 		if (pricestr=='0'||pricestr=='￥0.00'||pricestr=='0.00') {
-			console.log(oldprice);
 			oldprice=0;
 			pricetoal = price+oldprice;
 			$pricetoal.html('￥'+pricetoal+'.00');
@@ -250,6 +249,68 @@ $(function(){
 		}
 	});
 
-	//去结算||cookie的使用
+	//去购物车结算||cookie的使用
+	//获取cookie数据
+	var str = getCookie("arr");
+	// 用于存储所有的商品
+	var arr = [];
+	if (str != "")
+	{
+		arr=eval(str);
+		
+		var $tbody = $('.goods-table table').find('tbody');
+		$.each(arr,function(idx,val){
+			var $tr = $('<tr/>');
+			var $td1 = $('<td/>');
+			var $td2 = $('<td/>');
+			var $td3 = $('<td/>');
+			var $td4 = $('<td/>');
+			var $td5 = $('<td/>');
+			var $td6 = $('<td/>');
+			
+			$td1.addClass('tb-first').html('<a href="###">'+'<img src='+val.img+'>'+val.product+'</a>').appendTo($tr);
+			$td2.html('--').appendTo($tr);
+			$td3.html(val.price).appendTo($tr);
+			$td4.addClass('tb-four').html('<button class="tbminus">'+'-'+'</button>'+'<input class="input-num" type="text" value="1"'+'>'+'<button class="tbadd">'+'+'+'</button>').appendTo($tr);
+			$td5.addClass('tb-five').html(val.price).appendTo($tr);
+			$td6.addClass('tb-last').html('<a href="###">'+'加入我的收藏'+'</a>'+'<button class="btndel">'+'删除'+'</button>').appendTo($tr);
+
+			$tr.appendTo($tbody);
+		});
+		
+		
+	};
+
+	$('.goto').on('click','a',function(){
+		var $allgoodsDiv = $('.goodsDiv');
+		$.each($allgoodsDiv,function(idx,val){
+			//console.log(val);
+			var $_img = $(val).find('a').find('img');
+			var $_text = $(val).find('a').eq(1);
+			var $_price = $(val).find('.save-price');	
+			var obj = {} ;
+			obj.img = $_img.attr('src');
+			obj.price = $_price.text();
+			obj.product = $_text.html();
+			arr.push(obj);
+			console.log(JSON.stringify(arr));
+			// 将数组的内容设置到 cookie 中呢？
+			// cookie 的名字是 arr, 内容是数组中的商品，过期时间是7天以后
+			addCookie("arr",JSON.stringify(arr),7);//toSource()数组转为字符串
+		});
+
+		location.href = "goodscart.html";
+	});
+
+	//购物车结算页的商品删除
+	//var $btndel = $('.tb-last').find('button');
+	$('.goods-table table').on('click','.btndel',function(){
+		$(this).parent().parent().remove();
+	});
+
+
+
+
+
 
 });

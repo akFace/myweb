@@ -105,7 +105,8 @@
 .goodsDiv h2 a { color: #333; }
 .goodsDiv h2 span { display: block; }
 .goodsDiv h2 a:hover { color: #ff5073;background: #fff; }
-.goodsDiv p span { display: block;width: 20px;height: 20px;display: inline-block;border:1px solid #ddd; border-radius: 50%; line-height: 18px;text-align: center;font-size: 18px;color: #999;font-weight: bolder; margin: 4px 4px;}
+.goodsDiv p span { display: block;width: 18px;height: 18px;display: inline-block;border:1px solid #ddd; border-radius: 50%; line-height: 18px;text-align: center;font-size: 16px;color: #999;font-weight: bolder; margin: 4px 4px;}
+.goodsDiv p strong { font-weight: normal;color: #999; }
 .minus { margin-left: 7px; }
 .minus,.add { cursor: pointer; }
 .minus:hover { background: #ff5073; color: #fff; }

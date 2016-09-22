@@ -192,6 +192,7 @@
 .goods-table tbody tr { height: 111px; border: 1px solid #ddd;}
 .tb-first { text-align: left;width: 40%; padding-left: 10px;}
 .tb-first a,.tb-first img { float: left; }
+.tb-first img { width: 75px;height: 75px; }
 .goods-table tbody .tb-four {position: relative;left: 40px; }
 .goods-table tbody .tb-four input {height: 19px; float: left; border: 1px solid #ddd;text-align: center;}
 .goods-table tbody .tb-four button { float: left;width:19px ;height: 21px;border: 1px solid #ddd;background: #fff; }
