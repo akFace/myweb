@@ -153,6 +153,66 @@ $(function(){
 		$tablist.eq(index).show();
 
 	});
-	//-----------------------------------------------
+	//-----------飞（加）入购物车------------------------------------
+	//利用时间委托才能查找到ajax请求回来的数据
+	var m = 0 ;
+	var price = 0 ;
+	$('.list').on('click','button',function(){
+		$('.goto').show();
+		var $sidecart = $('.ico-siadecart');
+		//console.log( $(this).parents('div').prevAll('.content-img').find('img') );
+		var $thisImg = $(this).parents('div').prevAll('.content-img').find('img') ;
+		var $minimg = $(this).parents('div').prevAll('.content-img').find('a').clone() ;
+		var $clonetitle = $(this).parents('div').prevAll('.content-title').find('h2').clone() ;
+		var $cloneprice = $(this).parents('div').prevAll('.price-box').find('.save-price').clone() ;
+		var $cloneImg = $thisImg.clone();
+		var price = $(this).parents('div').prevAll('.price-box').find('.save-price').text() ;
+		//console.log(parseInt(price.slice(1,-1)));
+	    price = parseInt(price.slice(1,-1));
+	    if (price == price) {
+	    	
+	    }
+		price+=price;//总价格
+		++m;
+		$('.h4-1').find('span').html(m);
+		$('.h4-2').find('span').html('￥'+price+'.00');
+		//console.log( $(this).parents('div').prevAll('.content-img').find('img') .width());
+		$cloneImg.css({
+			position:'absolute',
+            width:$thisImg.width(),
+            borderRadius:'50%',
+            left:$thisImg.offset().left,
+            top:$thisImg.offset().top
+		}).appendTo('body');
+
+		$cloneImg.animate({
+			left:$sidecart.offset().left,
+            top:$sidecart.offset().top + $sidecart.outerHeight(),
+            width:10,
+            opacity:0
+		},800,function(){
+			$cloneImg.remove();
+			var $goodsDiv = $('<div/>');
+			var $p3 = $('<p/>');
+			var $span1 = $('<span/>');
+			var $span2 = $('<span/>');
+			var $span3 = $('<span/>');
+			var $strong = $('<strong/>');
+			$('.sidebar-goods-text').html('');
+
+			$span1.addClass('minus').html('-').appendTo($p3);
+			$strong.addClass('gnumber').html('1').appendTo($p3);
+			$span2.addClass('add').html('+').appendTo($p3);
+
+			$goodsDiv.addClass('goodsDiv clearfix').appendTo('.sidebar-goods');
+			$minimg.appendTo($goodsDiv);
+			$clonetitle.appendTo($goodsDiv);
+			$p3.appendTo($goodsDiv);
+			$cloneprice.appendTo($goodsDiv);
+			$span3.addClass('icon-del').appendTo($goodsDiv);
+
+		});
+
+	});
 
 });
