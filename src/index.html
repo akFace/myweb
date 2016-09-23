@@ -9,6 +9,16 @@
 	<script src="assets/jquery/jquery-1.12.0.js"></script>
 	<script src="js/common.js"></script>
 	<script src="js/index.js"></script>
+	<script>
+		$(function(){
+			
+			for(var i=3;i>0;i--) {
+				var $allLi = $('.products-list').find('li').clone();
+				$allLi.appendTo('.products-list');
+			}
+			
+		});
+	</script>
 </head>
 <body>
 	<div class="topbg">
@@ -19,8 +29,8 @@
 				<li>每月累计签到满10次，即可获得5蜜豆</li>
 			</ul>
 			<ul class="right">
-				<li><a href="#">登录</a>　|</li>
-				<li><a href="#">注册</a></li>
+				<li><a href="html/login.html">登录</a>　|</li>
+				<li><a href="html/register.html">注册</a></li>
 				<li><span class="ico-3"></span><a href="#">手机APP</a></li>
 				<li><span class="ico-4"></span><a href="#">在线客服</a></li>
 			</ul>
@@ -143,7 +153,7 @@
 					</ul>
 				</li>
 				<li class="navlist"><a class="nav-a" href="index.html">主页</a></li>
-				<li class="navlist"><a class="nav-a" href="#">尖货<span class="ico-hot"></span></a></li>
+				<li class="navlist"><a class="nav-a" href="html/productlist.html">尖货<span class="ico-hot"></span></a></li>
 				<li class="navlist">
 					<a class="nav-a" href="#">面膜</a>
 					<ul class="navhide">
@@ -248,170 +258,278 @@
 	</div>
 
 	<div class="content clearfix">
-			<ul class="products-list">
-				<li class="clearfix">
-					<span class="goods-icon-wrap"></span>
-					<a href="#" class="product-list-img">
-						<img src="img/00159_111_2.jpg" alt="轻松描绘美唇笔">
-						<h4>Pony Effect</h4>
-						<h3>轻松描绘美唇笔</h3>
-					</a>
-					<div class="details-price">
-						<div class="price">
-							<p class="preset-price"><span>￥</span>69.00</p>
-							<div class="market-price">
-								<p class="old-price"><del>￥108.00</del></p>
-								<p class="sav-price">立省￥39.00</p>
-							</div>
+		<ul class="products-list">
+			<li class="clearfix">
+				<span class="goods-icon-wrap"></span>
+				<a href="#" class="product-list-img">
+					<img src="img/00159_111_2.jpg" alt="轻松描绘美唇笔">
+					<h4>Pony Effect</h4>
+					<h3>轻松描绘美唇笔</h3>
+				</a>
+				<div class="details-price">
+					<div class="price">
+						<p class="preset-price"><span>￥</span>167.00</p>
+						<div class="market-price">
+							<p class="old-price"><del>￥108.00</del></p>
+							<p class="sav-price">立省￥39.00</p>
 						</div>
-						<button type="button" title="加入购物车" class="add-btn">加入购物车</button>
 					</div>
-				</li>
-				<li class="clearfix">
-					<span class="goods-icon-wrap"></span>
-					<a href="#" class="product-list-img">
-						<img src="img/00159_111_2.jpg" alt="轻松描绘美唇笔">
-						<h4>Pony Effect</h4>
-						<h3>轻松描绘美唇笔</h3>
-					</a>
-					<div class="details-price">
-						<div class="price">
-							<p class="preset-price"><span>￥</span>69.00</p>
-							<div class="market-price">
-								<p class="old-price"><del>￥108.00</del></p>
-								<p class="sav-price">立省￥39.00</p>
-							</div>
+					<button type="button" title="加入购物车" class="add-btn">加入购物车</button>
+				</div>
+			</li>
+			<li class="clearfix">
+				<span class="goods-icon-wrap"></span>
+				<a href="#" class="product-list-img">
+					<img src="img/00037__13.jpg" alt="轻松描绘美唇笔">
+					<h4>Pony Effect</h4>
+					<h3>轻松描绘美唇笔</h3>
+				</a>
+				<div class="details-price">
+					<div class="price">
+						<p class="preset-price"><span>￥</span>149.00</p>
+						<div class="market-price">
+							<p class="old-price"><del>￥108.00</del></p>
+							<p class="sav-price">立省￥39.00</p>
 						</div>
-						<button type="button" title="加入购物车" class="add-btn">加入购物车</button>
 					</div>
-				</li>
-				<li class="clearfix">
-					<span class="goods-icon-wrap"></span>
-					<a href="#" class="product-list-img">
-						<img src="img/00159_111_2.jpg" alt="轻松描绘美唇笔">
-						<h4>Pony Effect</h4>
-						<h3>轻松描绘美唇笔</h3>
-					</a>
-					<div class="details-price">
-						<div class="price">
-							<p class="preset-price"><span>￥</span>69.00</p>
-							<div class="market-price">
-								<p class="old-price"><del>￥108.00</del></p>
-								<p class="sav-price">立省￥39.00</p>
-							</div>
+					<button type="button" title="加入购物车" class="add-btn">加入购物车</button>
+				</div>
+			</li>
+			<li class="clearfix">
+				<span class="goods-icon-wrap"></span>
+				<a href="#" class="product-list-img">
+					<img src="img/00038__2016-05-23_4.32.39_1.jpg" alt="轻松描绘美唇笔">
+					<h4>Pony Effect</h4>
+					<h3>轻松描绘美唇笔</h3>
+				</a>
+				<div class="details-price">
+					<div class="price">
+						<p class="preset-price"><span>￥</span>75.00</p>
+						<div class="market-price">
+							<p class="old-price"><del>￥108.00</del></p>
+							<p class="sav-price">立省￥39.00</p>
 						</div>
-						<button type="button" title="加入购物车" class="add-btn">加入购物车</button>
 					</div>
-				</li>
-				<li class="clearfix">
-					<span class="goods-icon-wrap"></span>
-					<a href="#" class="product-list-img">
-						<img src="img/00159_111_2.jpg" alt="轻松描绘美唇笔">
-						<h4>Pony Effect</h4>
-						<h3>轻松描绘美唇笔</h3>
-					</a>
-					<div class="details-price">
-						<div class="price">
-							<p class="preset-price"><span>￥</span>69.00</p>
-							<div class="market-price">
-								<p class="old-price"><del>￥108.00</del></p>
-								<p class="sav-price">立省￥39.00</p>
-							</div>
+					<button type="button" title="加入购物车" class="add-btn">加入购物车</button>
+				</div>
+			</li>
+			<li class="clearfix">
+				<span class="goods-icon-wrap"></span>
+				<a href="#" class="product-list-img">
+					<img src="img/00043_c120010.jpg" alt="轻松描绘美唇笔">
+					<h4>Pony Effect</h4>
+					<h3>轻松描绘美唇笔</h3>
+				</a>
+				<div class="details-price">
+					<div class="price">
+						<p class="preset-price"><span>￥</span>96.00</p>
+						<div class="market-price">
+							<p class="old-price"><del>￥108.00</del></p>
+							<p class="sav-price">立省￥39.00</p>
 						</div>
-						<button type="button" title="加入购物车" class="add-btn">加入购物车</button>
 					</div>
-				</li>
-				<li class="clearfix">
-					<span class="goods-icon-wrap"></span>
-					<a href="#" class="product-list-img">
-						<img src="img/00159_111_2.jpg" alt="轻松描绘美唇笔">
-						<h4>Pony Effect</h4>
-						<h3>轻松描绘美唇笔</h3>
-					</a>
-					<div class="details-price">
-						<div class="price">
-							<p class="preset-price"><span>￥</span>69.00</p>
-							<div class="market-price">
-								<p class="old-price"><del>￥108.00</del></p>
-								<p class="sav-price">立省￥39.00</p>
-							</div>
+					<button type="button" title="加入购物车" class="add-btn">加入购物车</button>
+				</div>
+			</li>
+			<li class="clearfix">
+				<span class="goods-icon-wrap"></span>
+				<a href="#" class="product-list-img">
+					<img src="img/00052_s2353_2.jpg" alt="轻松描绘美唇笔">
+					<h4>Pony Effect</h4>
+					<h3>轻松描绘美唇笔</h3>
+				</a>
+				<div class="details-price">
+					<div class="price">
+						<p class="preset-price"><span>￥</span>78.00</p>
+						<div class="market-price">
+							<p class="old-price"><del>￥108.00</del></p>
+							<p class="sav-price">立省￥39.00</p>
 						</div>
-						<button type="button" title="加入购物车" class="add-btn">加入购物车</button>
 					</div>
-				</li>
-				<li class="clearfix">
-					<span class="goods-icon-wrap"></span>
-					<a href="#" class="product-list-img">
-						<img src="img/00159_111_2.jpg" alt="轻松描绘美唇笔">
-						<h4>Pony Effect</h4>
-						<h3>轻松描绘美唇笔</h3>
-					</a>
-					<div class="details-price">
-						<div class="price">
-							<p class="preset-price"><span>￥</span>69.00</p>
-							<div class="market-price">
-								<p class="old-price"><del>￥108.00</del></p>
-								<p class="sav-price">立省￥39.00</p>
-							</div>
+					<button type="button" title="加入购物车" class="add-btn">加入购物车</button>
+				</div>
+			</li>
+			<li class="clearfix">
+				<span class="goods-icon-wrap"></span>
+				<a href="#" class="product-list-img">
+					<img src="img/00044__1_2_9.jpg" alt="轻松描绘美唇笔">
+					<h4>Pony Effect</h4>
+					<h3>轻松描绘美唇笔</h3>
+				</a>
+				<div class="details-price">
+					<div class="price">
+						<p class="preset-price"><span>￥</span>350.00</p>
+						<div class="market-price">
+							<p class="old-price"><del>￥108.00</del></p>
+							<p class="sav-price">立省￥39.00</p>
 						</div>
-						<button type="button" title="加入购物车" class="add-btn">加入购物车</button>
 					</div>
-				</li>
-				<li class="clearfix">
-					<span class="goods-icon-wrap"></span>
-					<a href="#" class="product-list-img">
-						<img src="img/00159_111_2.jpg" alt="轻松描绘美唇笔">
-						<h4>Pony Effect</h4>
-						<h3>轻松描绘美唇笔</h3>
-					</a>
-					<div class="details-price">
-						<div class="price">
-							<p class="preset-price"><span>￥</span>69.00</p>
-							<div class="market-price">
-								<p class="old-price"><del>￥108.00</del></p>
-								<p class="sav-price">立省￥39.00</p>
-							</div>
+					<button type="button" title="加入购物车" class="add-btn">加入购物车</button>
+				</div>
+			</li>
+			<li class="clearfix">
+				<span class="goods-icon-wrap"></span>
+				<a href="#" class="product-list-img">
+					<img src="img/00046_1_14_5.jpg" alt="轻松描绘美唇笔">
+					<h4>Pony Effect</h4>
+					<h3>轻松描绘美唇笔</h3>
+				</a>
+				<div class="details-price">
+					<div class="price">
+						<p class="preset-price"><span>￥</span>178.00</p>
+						<div class="market-price">
+							<p class="old-price"><del>￥108.00</del></p>
+							<p class="sav-price">立省￥39.00</p>
 						</div>
-						<button type="button" title="加入购物车" class="add-btn">加入购物车</button>
 					</div>
-				</li>
-				<li class="clearfix">
-					<span class="goods-icon-wrap"></span>
-					<a href="#" class="product-list-img">
-						<img src="img/00159_111_2.jpg" alt="轻松描绘美唇笔">
-						<h4>Pony Effect</h4>
-						<h3>轻松描绘美唇笔</h3>
-					</a>
-					<div class="details-price">
-						<div class="price">
-							<p class="preset-price"><span>￥</span>69.00</p>
-							<div class="market-price">
-								<p class="old-price"><del>￥108.00</del></p>
-								<p class="sav-price">立省￥39.00</p>
-							</div>
+					<button type="button" title="加入购物车" class="add-btn">加入购物车</button>
+				</div>
+			</li>
+			<li class="clearfix">
+				<span class="goods-icon-wrap"></span>
+				<a href="#" class="product-list-img">
+					<img src="img/00047_thumbnail-change2022_1_1.jpg" alt="轻松描绘美唇笔">
+					<h4>Pony Effect</h4>
+					<h3>轻松描绘美唇笔</h3>
+				</a>
+				<div class="details-price">
+					<div class="price">
+						<p class="preset-price"><span>￥</span>159.00</p>
+						<div class="market-price">
+							<p class="old-price"><del>￥108.00</del></p>
+							<p class="sav-price">立省￥39.00</p>
 						</div>
-						<button type="button" title="加入购物车" class="add-btn">加入购物车</button>
 					</div>
-				</li>
-				<li class="clearfix">
-					<span class="goods-icon-wrap"></span>
-					<a href="#" class="product-list-img">
-						<img src="img/00159_111_2.jpg" alt="轻松描绘美唇笔">
-						<h4>Pony Effect</h4>
-						<h3>轻松描绘美唇笔</h3>
-					</a>
-					<div class="details-price">
-						<div class="price">
-							<p class="preset-price"><span>￥</span>69.00</p>
-							<div class="market-price">
-								<p class="old-price"><del>￥108.00</del></p>
-								<p class="sav-price">立省￥39.00</p>
-							</div>
+					<button type="button" title="加入购物车" class="add-btn">加入购物车</button>
+				</div>
+			</li>
+			<li class="clearfix">
+				<span class="goods-icon-wrap"></span>
+				<a href="#" class="product-list-img">
+					<img src="img/00048__-120ml.jpg" alt="轻松描绘美唇笔">
+					<h4>Pony Effect</h4>
+					<h3>轻松描绘美唇笔</h3>
+				</a>
+				<div class="details-price">
+					<div class="price">
+						<p class="preset-price"><span>￥</span>59.00</p>
+						<div class="market-price">
+							<p class="old-price"><del>￥108.00</del></p>
+							<p class="sav-price">立省￥39.00</p>
 						</div>
-						<button type="button" title="加入购物车" class="add-btn">加入购物车</button>
 					</div>
-				</li>
-			</ul>
+					<button type="button" title="加入购物车" class="add-btn">加入购物车</button>
+				</div>
+			</li>
+			<li class="clearfix">
+				<span class="goods-icon-wrap"></span>
+				<a href="#" class="product-list-img">
+					<img src="img/00050_s51.jpg" alt="轻松描绘美唇笔">
+					<h4>Pony Effect</h4>
+					<h3>轻松描绘美唇笔</h3>
+				</a>
+				<div class="details-price">
+					<div class="price">
+						<p class="preset-price"><span>￥</span>119.00</p>
+						<div class="market-price">
+							<p class="old-price"><del>￥108.00</del></p>
+							<p class="sav-price">立省￥39.00</p>
+						</div>
+					</div>
+					<button type="button" title="加入购物车" class="add-btn">加入购物车</button>
+				</div>
+			</li>
+			<li class="clearfix">
+				<span class="goods-icon-wrap"></span>
+				<a href="#" class="product-list-img">
+					<img src="img/00051_s219.jpg" alt="轻松描绘美唇笔">
+					<h4>Pony Effect</h4>
+					<h3>轻松描绘美唇笔</h3>
+				</a>
+				<div class="details-price">
+					<div class="price">
+						<p class="preset-price"><span>￥</span>149.00</p>
+						<div class="market-price">
+							<p class="old-price"><del>￥108.00</del></p>
+							<p class="sav-price">立省￥39.00</p>
+						</div>
+					</div>
+					<button type="button" title="加入购物车" class="add-btn">加入购物车</button>
+				</div>
+			</li>
+			<li class="clearfix">
+				<span class="goods-icon-wrap"></span>
+				<a href="#" class="product-list-img">
+					<img src="img/00052_s2353_2.jpg" alt="轻松描绘美唇笔">
+					<h4>Pony Effect</h4>
+					<h3>轻松描绘美唇笔</h3>
+				</a>
+				<div class="details-price">
+					<div class="price">
+						<p class="preset-price"><span>￥</span>169.00</p>
+						<div class="market-price">
+							<p class="old-price"><del>￥108.00</del></p>
+							<p class="sav-price">立省￥39.00</p>
+						</div>
+					</div>
+					<button type="button" title="加入购物车" class="add-btn">加入购物车</button>
+				</div>
+			</li>
+			<li class="clearfix">
+				<span class="goods-icon-wrap"></span>
+				<a href="#" class="product-list-img">
+					<img src="img/00055_tb2b2czkfxxxxxexpxxxxxxxxxx__203896559.jpg" alt="轻松描绘美唇笔">
+					<h4>Pony Effect</h4>
+					<h3>轻松描绘美唇笔</h3>
+				</a>
+				<div class="details-price">
+					<div class="price">
+						<p class="preset-price"><span>￥</span>64.00</p>
+						<div class="market-price">
+							<p class="old-price"><del>￥108.00</del></p>
+							<p class="sav-price">立省￥39.00</p>
+						</div>
+					</div>
+					<button type="button" title="加入购物车" class="add-btn">加入购物车</button>
+				</div>
+			</li>
+			<li class="clearfix">
+				<span class="goods-icon-wrap"></span>
+				<a href="#" class="product-list-img">
+					<img src="img/00053_s2369_1.jpg" alt="轻松描绘美唇笔">
+					<h4>Pony Effect</h4>
+					<h3>轻松描绘美唇笔</h3>
+				</a>
+				<div class="details-price">
+					<div class="price">
+						<p class="preset-price"><span>￥</span>159.00</p>
+						<div class="market-price">
+							<p class="old-price"><del>￥108.00</del></p>
+							<p class="sav-price">立省￥39.00</p>
+						</div>
+					</div>
+					<button type="button" title="加入购物车" class="add-btn">加入购物车</button>
+				</div>
+			</li>
+			<li class="clearfix">
+				<span class="goods-icon-wrap"></span>
+				<a href="#" class="product-list-img">
+					<img src="img/00036_p324_2.jpg" alt="轻松描绘美唇笔">
+					<h4>Pony Effect</h4>
+					<h3>轻松描绘美唇笔</h3>
+				</a>
+				<div class="details-price">
+					<div class="price">
+						<p class="preset-price"><span>￥</span>159.00</p>
+						<div class="market-price">
+							<p class="old-price"><del>￥108.00</del></p>
+							<p class="sav-price">立省￥39.00</p>
+						</div>
+					</div>
+					<button type="button" title="加入购物车" class="add-btn">加入购物车</button>
+				</div>
+			</li>
+		</ul>
 	</div>
 	<!-- 侧边栏 -->
 	<div class="sidebar">
@@ -490,13 +608,19 @@
 			</div>
 		</div>
 		<div class="footer-center clearfix">
-			<div class="footer-1">
+			<div class="footer-1 relative">
 				<p class="footer-pic"><img src="img/szj.jpg" alt=""></p>
 				<h3>关于我们</h3>
 				<p>
 					<img class="erweima" src="img/meme.png" alt="美美箱">
 					<img class="erweima" src="img/wechat.png" alt="美美箱">
 					<img class="erweima" src="img/sina.png" alt="美美箱">
+				</p>
+
+				<p>
+					<img class="erweimaimg erweimaimg1" src="img/00035_wechatdownload.png" alt="美美箱">
+					<img class="erweimaimg erweimaimg2" src="img/00036_sinadownload.png" alt="美美箱">
+					<img class="erweimaimg erweimaimg3" src="img/00034_download.png" alt="美美箱">
 				</p>
 			</div>
 			

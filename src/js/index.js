@@ -148,6 +148,17 @@ $(function(){
 		});
 	});
 
+
+	//联系与关注--------------------------------------
+	
+	$('.footer-1').on('mouseenter','.erweima',function(){
+		var index = $(this).index();
+		$(this).parent().next().find('.erweimaimg').eq(index).stop(true,true).show(200);
+	});
+
+	$('.footer-1').on('mouseleave','.erweima',function(){
+		$('.erweimaimg').stop(true,true).hide(200);
+	});
 	//加入购物车
 
 });

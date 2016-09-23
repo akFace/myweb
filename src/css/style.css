@@ -21,7 +21,7 @@
 .product-list-top p { float: left; font-size: 14px;color: #333;}
 .product-list-top p em { color: #ccc; }
 #product-sort { float: left; margin: 10px 0 0 10px; height: 36px; border: 1px solid #ddd;padding: 8px;color: #333}
-.icon-sort { display: block;width:30px;height: 30px;background: url(ico-img/pix.png) no-repeat 0px -90px;position: absolute;top: 18px;left: 220px;cursor: pointer;
+.icon-sort { display: block;width:30px;height: 30px;background: url(ico-img/pix.png) no-repeat 0px -90px;position: absolute;top: 15px;left: 220px;cursor: pointer;
     transition: 0.5s;
 	-moz-transition: 0.5s;	/* Firefox 4 */
 	-webkit-transition: 0.5s;	/* Safari 和 Chrome */
@@ -30,6 +30,7 @@
 
 /*-------------------商品内容列表--------------------*/
 .product-listwarp { margin-top: 5px; }
+.poster-1 { margin-top: 40px; }
 .product-listwarp ul { border-bottom: 1px solid #ddd; padding-bottom: 20px; }
 .item {width: 23%; padding: 22px 10px 20px 10px; border-top: 1px solid #e5e5e5; text-align: center; float: left;margin-top: 15px;transition: 0.5s;
 	-moz-transition: 0.5s;	/* Firefox 4 */
@@ -37,8 +38,19 @@
 	-o-transition: 0.5s;	/* Opera */}
 .item:hover { box-shadow: 0 0 20px rgba(0,0,0,0.2); }
 .content-img { position: relative; }
-.content-img img { width: 264px ; height: 264px;}
-.icon-local { display: block;width:42px;height: 41px;background: url(ico-img/goods-local.png);position: absolute;top: 0;left: 3px;  }
+.content-img img { width: 264px ; height: 264px; transition: 0.5s;
+	-moz-transition: 0.5s;	/* Firefox 4 */
+	-webkit-transition: 0.5s;	/* Safari 和 Chrome */
+	-o-transition: 0.5s;	/* Opera */
+}
+.content-img img:hover {
+	-webkit-transform:scale(1.02) ; 
+	-moz-transform:scale(1.02); 
+	-o-transform:scale(1.02) ;
+	transform:scale(1.02);
+	overflow: hidden;
+}
+.icon-local {z-index: 100; display: block;width:42px;height: 41px;background: url(ico-img/goods-local.png);position: absolute;top: 0;left: 3px;  }
 .content-title { padding: 20px 0 0 0 ;line-height: 22px;font-size: 18px; }
 .content-title span { display: block; font-size: 16px;}
 .content-title a { color: #333; }
@@ -218,22 +230,25 @@
 .login-bg {width: 100%;height: 480px; background:url(../img/login.jpg) no-repeat center; margin-top: 40px;padding-bottom: 40px; }
 .login-box { width: 410px; height: 350px;background: #fff;position: absolute;top:90px;right: 10%;text-align: center;border: 1px solid #eee;}
 .login-form { margin-top: 90px; }
-.login-box input { width: 80%;height: 35px; margin-top: 20px; text-indent: 8px;}
+.login-box input { width: 80%;height: 35px; margin-top: 20px; text-indent: 8px;line-height: 35px;}
 .login-box h3 { float: left; margin-top: 20px;padding-left: 35px;font-size: 16px;}
 .zhuce { float: right;margin-top: 20px; padding-right: 37px;}
 .zhuce a { color: #3d86f4; }
-#submit { background: #ff5073;color: #fff;border: none; font-size: 18px; cursor: pointer;}
-.misspassword { text-align: right; padding: 15px 35px 20px 0 ;border-bottom: 1px solid #ddd;}
+#login { background: #ff5073;color: #fff;border: none; font-size: 18px; cursor: pointer; }
+.misspassword { text-align: right; padding: 15px 35px 20px 0 ;border-bottom: 1px solid #ddd;margin-top: 5px;}
 .misspassword a { color: #333; }
 .login-tips {height: 36px; position: absolute;top:55px;left: 37px; width:80%; border: 1px solid #ffd797;background:#fffff8;  text-align: left;display: none;}
-.icon-waring { display: inline-block;width:21px;height: 21px;background: url(ico-img/mbar-smallICon.png) no-repeat -193px -29px;  margin: 7px 0 0 7px;}
-.waring-text { margin: -20px 0 0 6px!important; }
+.icon-waring { display: inline-block;width:21px;height: 21px;background: url(ico-img/mbar-smallICon.png) no-repeat -193px -29px;  margin: 10px 0 0 7px;}
+.waring-text { margin: 0 0 0 6px!important; color: #ff5073;position: relative;top: -6px; }
+.login-box .savePwd { float: left; line-height: 15px;padding: 0 0 0 41px;}
+.login-box .savePwd label { padding: -4px 0 0 7px; }
+#savePwd {width: 15px; height: 15px; margin-right: 7px;}
 
 /*------------注册页面---------------*/
 .login-box2 { width: 410px; height: 350px;background: #fff;position: absolute;top:70px;right: 10%;text-align: center;padding-bottom: 40px;border: 1px solid #eee;}
 .login-box2 input { width: 80%;height: 35px; margin-top: 20px; text-indent: 8px;}
 .login-box2 h3 { float: left; margin-top: 20px;padding-left: 35px;font-size: 16px;}
-
+#submit { background: #ff5073;color: #fff;border: none; font-size: 18px; cursor: pointer;}
 #logincode { width: 55%; float: left;margin-left: 37px;}
 #sendcode { width: 25%; float: left;border: 1px solid #ff5073;background: #fff;height: 39px;margin-left: 4px;color: #ff5073;cursor: pointer;}
 .agreement { text-align: center;padding-top: 10px; }

@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 /*首页商品分类及下拉菜单*/
+.relatice { position: relative; }
 #product { width: 160px;padding-left: 0px;position: relative;height: 480px;z-index: 100;}
 #product .product2 { text-align: left;height: 480px; background: rgba(0,0,0,0.5);z-index: 100;margin-top: -6px;}
 #product .product2 li { width: 170px;}
