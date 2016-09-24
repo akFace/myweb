@@ -45,21 +45,24 @@ $(function(){
 	});
 
 	$.ajax();
-
+	var r = 0;//用于判断请求次数
 	$(window).on('scroll',function(){
 		var scrollTop = $(window).scrollTop();
 
 		// 懒加载：滚动《快到底部》的时候再加载
-		if(scrollTop >= $(document).height() - $(window).height() - 300){
+		if(scrollTop >= $(document).height() - $(window).height() - 200){
+			r++;
 			pageNum++;
 			if(pageNum>=4){
 				pageNum = 1;
-			}
-
-			$.ajax({
-				data:{pageNo:pageNum}
-			});
-		}
+			};
+			if (r<=3) {
+					$.ajax({
+					data:{pageNo:pageNum}
+				});
+			};
+			
+		};
 	});
 	// 手动触发滚动事件
 	$(window).trigger('scroll');
@@ -487,11 +490,11 @@ $(function(){
 	
 	$('.footer-1').on('mouseenter','.erweima',function(){
 		var index = $(this).index();
-		$(this).parent().next().find('.erweimaimg').eq(index).stop(true,true).show(200);
+		$(this).parent().next().find('.erweimaimg').eq(index).stop(true).show(200);
 	});
 
 	$('.footer-1').on('mouseleave','.erweima',function(){
-		$('.erweimaimg').stop(true,true).hide(200);
+		$('.erweimaimg').stop(true).hide(200);
 	});
 
 });
