@@ -4,7 +4,7 @@ $(function(){
 	var pageNum = 1;
 	// 全局配置
 	$.ajaxSetup({
-		url:'/ajax/weibo',//API地址（数据请求地址）
+		url:'../data/weibo.json',//API地址（数据请求地址）
 		data:{pageNo:pageNum},
 		dataType:'json',
 		success:function(res){
